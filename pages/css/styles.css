@@ -17,6 +17,8 @@ header {
 header img {
     width: 100px;
     border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 nav ul {
@@ -24,6 +26,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;  /* Ensure items wrap on smaller screens */
 }
 
 nav ul li {
@@ -71,6 +74,38 @@ blockquote p {
     display: inline;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+form input, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #1c6b2c;
+}
+
 footer {
     background: #28a745;
     color: #fff;
@@ -89,4 +124,22 @@ footer {
 
 .footer-nav ul li {
     margin: 0 10px;
+}
+
+.footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;  /* Stack items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
 }
